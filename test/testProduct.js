@@ -10,7 +10,7 @@ contract('Product', () => {
     it('Should add Product', async() => {
         const storage = await Product.new();
         const address = '0xCb00A4F3BAdE60CB898D2C1B004bB653da4232e2';
-        await storage.addProduct(address);
+        await storage.addProduct(address, 1000, 12);
         const value = await storage.getProduct(address);
         console.log(`address: ${value}`);
         assert(value);

@@ -4,15 +4,15 @@ pragma solidity 0.8.11;
 /**
   Contract Demo
  */
-contract MyFirstContract{
+contract Product{
 
-    struct Product{
+    struct Item{
         uint price;
         uint stock;
         bool enabled;
     }
 
-    event RegisterLog(address indexed _sender, address indexed _product, uint _stock, uint _price);
+    event addItem(address indexed _sender, address indexed _item, uint _stock, uint _price);
 
     address immutable _owner;
 
@@ -25,21 +25,21 @@ contract MyFirstContract{
         _;
     }
 
-    mapping (address => Product) products;
+    mapping (address => Item) items;
 
-    function addProduct(address _product, uint _price, uint _stock) onlyOwner external {
-        Product memory prod = Product( _price, _stock, true);
-        products[_product] = prod;  
+    function addProduct(address _item, uint _price, uint _stock) onlyOwner external {
+        Item memory prod = Item( _price, _stock, true);
+        items[_item] = prod;  
 
-        emit RegisterLog(msg.sender, _product, _stock, _price );
+        emit addItem(msg.sender, _item, _stock, _price );
     }
    
-    function getProduct(address _product) view external returns( Product memory){
-        Product storage p = products[_product];
+    function getProduct(address _item) view external returns( Item memory){
+        Item storage p = items[_item];
         return p;
     }
 
-    function deleteProduct(address _product) onlyOwner external{
-        delete products[_product];
+    function deleteProduct(address _item) onlyOwner external{
+        delete items[_item];
     }
 }
