@@ -1,10 +1,7 @@
-
 # List git tags 
-   $ git checkout v1  // basic
-   $ git checkout v2  // delete contracts and add smartContract Product.sol and testing
-   $ git checkout v3  // add network binance tests
-
-
+ -  $ git checkout v1  // basic
+ -  $ git checkout v2  // delete contracts and add smartContract Product.sol and testing
+ -  $ git checkout v3  // add network binance tests
 
 ## Setting up Truffle
 1. install [nodejs](https://nodejs.org/en/)
