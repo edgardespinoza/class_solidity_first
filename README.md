@@ -1,5 +1,10 @@
 
-# Setting up Truffle
+# List git tags 
+   $ git checkout v1  // basic
+   $ git checkout v2  // delete contracts and add smartContract Product.sol and testing
+
+
+## Setting up Truffle
 1. install [nodejs](https://nodejs.org/en/)
 
     ```sh
@@ -31,7 +36,7 @@
 
 ## compile project
     ```
-    $ sudo truffle compile
+    $ sudo truffle compile --all
     ```
 
 ## deploy contract  
