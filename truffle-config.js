@@ -71,9 +71,12 @@ module.exports = {
     // production: true    // Treats this network as if it was a public net. (default: false)
     // }
     bscTestnet: {
+      networkCheckTimeout: 10000, 
       provider: () => new HDWalletProvider(privateKeys, 
       `https://data-seed-prebsc-1-s1.binance.org:8545/`),
-      network_id: 97,       
+      network_id: 97,     
+      confirmations: 10,
+      timeoutBlocks: 2000,  
       skipDryRun: true
     }
   },
@@ -86,7 +89,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.11",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.2",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {
