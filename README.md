@@ -118,7 +118,7 @@ create file ".secret" with the privatekey ethereum
     ```
 
 5. view contract address in console for example:
-   > contract address:    0x3867ED1E0f9DBD136E1E3D897BBd732196588d9F
+   > contract address:    0x999b6B166927257F21c7e0951dfC87Bb36192e5a
 
 ---
 
@@ -126,3 +126,10 @@ create file ".secret" with the privatekey ethereum
     ```
     solcjs --optimize --bin --abi --include-path node_modules/ --base-path . ./contracts/MyERC20.sol -o dist
     ```
+
+
+---
+## java
+  ```bash
+    web3j generate solidity  --abiFile=./dist/MyERC20.abi --outputDir=./out/ --package=id.com
+  ```

@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @custom:security-contact edgard.espinoza.rivas@gmail.com
 contract MyERC20 is ERC20, ERC20Burnable, Pausable, Ownable {
-    constructor() ERC20("NTTKOIN", "NTTK") {}
+    constructor() ERC20("NITRO", "NT") {}
 
     function pause() public onlyOwner {
         _pause();
