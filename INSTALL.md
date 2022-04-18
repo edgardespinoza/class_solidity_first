@@ -23,31 +23,49 @@
 
 ## create project
 
-1. install dependencies
+1. Create directory
     ```powershell
-    $  npm i
+    $ mkdir firstContract
+    $ cd firstContract
+    ```
+2. create project truffle
+
+    ```powershell
+    $ npm init -y
     ```
 
-2.  compile
     ```powershell
-    $ truffle compile --all
+    $ truffle init
     ```
 
-3.  test 
-    ```powershell
-    $ truffle test
-    ```
+## compile project
 
-4.  develop
-    ```powershell
+        sh
+        $  truffle compile --all
+        ```
+        ```powershell
+        $ truffle init
+        ```
+## deploy contract  
+   before run
+   
+    ```
     $  truffle develop
     ```
 
-    ```powershell
+    ```
     $ truffle migrate
     ```
 
-    if you need reset add  --reset
+    if you need reset 
+    ```
+    $ truffle migrate --reset
+    ```
+
+##  test
+    ```
+    $ truffle test
+    ```
 
 ---
 # testnet with Binance
@@ -55,10 +73,10 @@
 
 2. validate tokens in [testnet Binance](https://testnet.bscscan.com/)
 
-3. install hd-wallet
-    ```powershell
-    $ npm install @truffle/hdwallet-provider
-    ```
+3. install hdwallet
+```
+$ npm install @truffle/hdwallet-provider
+```
 
 4. In the file `truffle-config.js` add
 
@@ -83,8 +101,8 @@ module.exports = {
 }
 ```
 
-4. deploy contract to binance 
-    ```powershell
-    $ truffle migrate --reset --network bscTestnet
-    ```
+4. run 
+```
+$ truffle migrate --reset --network bscTestnet
+```
 ---
