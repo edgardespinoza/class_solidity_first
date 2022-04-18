@@ -1,5 +1,7 @@
-.secret
 build/**
 node_modules/**
 package-lock.json
 /contracts/.sol*
+out/
+dist/
+.vscode/**
