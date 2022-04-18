@@ -1,4 +1,6 @@
 # List git tags 
+ - see [concepts blockchain](https://demoblockchain.org/hash)
+ - see [scan blocks](https://www.blockchain.com/explorer?view=btc)
  -  $ git checkout v1  // basic
  -  $ git checkout v2  // delete contracts and add smartContract Product.sol and testing
  -  $ git checkout v3  // add network binance tests
