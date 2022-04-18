@@ -8,43 +8,44 @@
  -  $ git checkout v2  // delete contracts and add smartContract Product.sol and testing
  -  $ git checkout v3  // add network binance tests
 
-## Setting up Truffle
+## 🔩  Setting up Truffle
 1. install [nodejs](https://nodejs.org/en/)
 
     ```bash
-    $  npm install -g truffle
+    npm install -g truffle
     ```
 
-2. see the version
-    ```properties
-    $ truffle version
+2. 🙈  see the version
+    ```bash
+    truffle version
+    ```
+
+ 3. 💎 get dependencies
+    ```sh
+    npm i
     ```
  ___
 
-## create project
+## 🏗️ Build Smart Contract 
 
-1. install dependencies
-    ```sh
-    $  npm i
-    ```
-
-2.  compile
+1.  🧭 compile
     ```bash
-    $ truffle compile --all
+    truffle compile --all
     ```
 
-3.  test 
-    ```powershell
-    $ truffle test
+2. 🧪 test 
+    ```bash
+    truffle test
     ```
 
-4.  develop
-    ```powershell
-    $  truffle develop
+3. 🏷️ develop
+    ```bash
+    truffle develop
     ```
 
-    ```powershell
-    $ truffle migrate
+4.  🚀 deploy  
+    ```bash
+     truffle migrate
     ```
 
     if you need reset add  --reset
@@ -53,16 +54,16 @@
 
 # testnet with Binance
 
-1. get tokens faucet [Binance BNB](https://testnet.binance.org/faucet-smart)
+1. 💰 get tokens faucet [Binance BNB](https://testnet.binance.org/faucet-smart)
 
-2. validate tokens in [testnet Binance](https://testnet.bscscan.com/)
+2. ✅ validate tokens in [testnet Binance](https://testnet.bscscan.com/)
 
-3. install hd-wallet
-    ```powershell
+3. 🪛 install hd-wallet
+    ```bash
     $ npm install @truffle/hdwallet-provider
     ```
 
-4. In the file `truffle-config.js` add
+4. ⚙️ In the file `truffle-config.js` add
 
 create file ".secret" with the privatekey ethereum 
 
@@ -89,8 +90,8 @@ create file ".secret" with the privatekey ethereum
 }
 ```
 
-4. deploy contract to binance 
-    ```powershell
+4. 🚀 deploy  contract to binance 
+    ```bash
     $ truffle migrate --reset --network bscTestnet
     ```
 ---
