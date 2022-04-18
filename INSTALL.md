@@ -6,28 +6,41 @@
 ## Setting up Truffle
 1. install [nodejs](https://nodejs.org/en/)
 
-    ```bash
-    $  npm install truffle
+    ```sh
+    $ sudo npm install -g truffle
     ```
 
 2. see the version
-    ```bash
+    ```sh
     $ truffle version
     ```
+ ___
 
-3. update package
-    ```bash
-    $ npm i
+## create project
+
+1. Create directory
+    ```
+    $ mkdir firstContract
+    $ cd firstContract
+    ```
+2. create project truffle
+
+    ```
+    $ npm init -y
     ```
 
+    ```
+    $ truffle init
+    ```
 
 ## compile project
-    ```bash
+    ```
     $ sudo truffle compile --all
     ```
 
 ## deploy contract  
    before run
+   
     ```
     $ sudo truffle develop
     ```
