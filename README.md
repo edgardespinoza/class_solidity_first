@@ -11,12 +11,12 @@
 ## Setting up Truffle
 1. install [nodejs](https://nodejs.org/en/)
 
-    ```powershell
+    ```bash
     $  npm install -g truffle
     ```
 
 2. see the version
-    ```powershell
+    ```properties
     $ truffle version
     ```
  ___
@@ -24,12 +24,12 @@
 ## create project
 
 1. install dependencies
-    ```powershell
+    ```sh
     $  npm i
     ```
 
 2.  compile
-    ```powershell
+    ```bash
     $ truffle compile --all
     ```
 
