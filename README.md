@@ -50,7 +50,9 @@
     if you need reset add  --reset
 
 ---
+
 # testnet with Binance
+
 1. get tokens faucet [Binance BNB](https://testnet.binance.org/faucet-smart)
 
 2. validate tokens in [testnet Binance](https://testnet.bscscan.com/)
@@ -64,20 +66,24 @@
 
 create file ".secret" with the privatekey ethereum 
 
-```js
- //add code
- const HDWalletProvider = require('@truffle/hdwallet-provider');
- const fs = require('fs');
- const privateKeys = fs.readFileSync(".secret").toString().trim();
- 
-module.exports = {
-    networks: {
-        bscTestnet: {
-            provider: () => new HDWalletProvider(privateKeys, 
-            `https://data-seed-prebsc-1-s1.binance.org:8545/`),
-            network_id: 97,       
-            skipDryRun: true
+    ```js
+    //add code
+    const HDWalletProvider = require('@truffle/hdwallet-provider');
+    const fs = require('fs');
+    const privateKeys = fs.readFileSync(".secret").toString().trim();
+    
+    module.exports = {
+        networks: {
+            bscTestnet: {
+                networkCheckTimeout: 10000, 
+                provider: () => new HDWalletProvider(privateKeys,  `https://data-seed-prebsc-1-s1.binance.org:8545/`),
+                network_id: 97,     
+                confirmations: 10,
+                timeoutBlocks: 2000,  
+                skipDryRun: true
             }
+        }
+        // more code
     }
     // more code
 }
