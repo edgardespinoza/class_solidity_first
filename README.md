@@ -24,6 +24,17 @@
     ```sh
     npm i
     ```
+
+4. 🪛 install hd-wallet
+    ```bash
+    $ npm install @truffle/hdwallet-provider
+    ```
+
+5.  ```bash
+    $ npm install @openzeppelin/contracts
+    $ npm install --save-dev @openzeppelin/truffle-upgrades
+    $ npm install @openzeppelin/contracts-upgradeable
+    ```
  ___
 
 ## 🏗️ Build Smart Contract 
@@ -58,10 +69,7 @@
 
 2. ✅ validate tokens in [testnet Binance](https://testnet.bscscan.com/)
 
-3. 🪛 install hd-wallet
-    ```bash
-    $ npm install @truffle/hdwallet-provider
-    ```
+
 
 4. ⚙️ In the file `truffle-config.js` add
 
